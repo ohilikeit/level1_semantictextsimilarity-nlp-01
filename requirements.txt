@@ -1,5 +1,6 @@
 pip==23.1.2
 gdown
+wandb
 pyYAML==5.4.1
 pytorch-lightning==1.7.3
 tqdm==4.64.1

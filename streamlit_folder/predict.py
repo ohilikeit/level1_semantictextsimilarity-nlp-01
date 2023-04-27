@@ -6,6 +6,7 @@ from streamlit_folder.model import MySTSModel
 import yaml
 from transformers import AutoTokenizer
 import sys
+from models import *
 with open("streamlit_folder/config.yaml") as f:
     config = yaml.load(f, Loader=yaml.FullLoader)
 sys.path.insert(0, config['model_path'])
