@@ -1,3 +1,5 @@
+import os
+import gdown
 import torch
 import streamlit as st
 from streamlit_folder.model import MySTSModel
@@ -9,10 +11,19 @@ with open("streamlit_folder/config.yaml") as f:
 sys.path.insert(0, config['model_path'])
 sys.path.insert(0, config['home_path'])
 
+# Function to download the model file
+def download_model_file(url):
+    output = "model.pt"
+    gdown.download(url, output, quiet=False)
+
 @st.cache_resource
 def load_model() -> MySTSModel:
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-    model = torch.load(config['model_path'], map_location=device)
+    if not os.path.exists("model.pt"):
+        download_model_file('https://drive.google.com/file/d/1ol_Pd3LDmTcG04h7VGHYkTD4TpgUlVk1/view?usp=share_link')
+    
+    model_path = 'model.pt'
+    model = torch.load(model_path, map_location=device)
 
     return model
 
