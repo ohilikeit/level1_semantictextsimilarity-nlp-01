@@ -34,7 +34,7 @@ def main():
                     'sentence 2': [sentence2],
                     'similarity': [similarity_score]
                 })
-                st.session_state.df = st.session_state.df.append(new_data, ignore_index=True)
+                st.session_state.df = pd.concat([st.session_state.df, new_data])
                 
                 # similarity 기준으로 순위 매기기
                 st.session_state.df = st.session_state.df.sort_values(by='similarity', ascending=False).reset_index(drop=True)
