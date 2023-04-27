@@ -2,10 +2,16 @@
 - boostcamp AI Tech 5 NLP 트랙 레벨1 프로젝트
 - 문장 간 유사도 (STS; Semantic Textual Similarity) 측정 대회
 
+## 모델 시연
+[streamlit-app-2023-04-28-01-04-75.webm](https://user-images.githubusercontent.com/37128004/234932601-2356c752-7efa-457b-9b29-4dc44706e113.webm)
+
+체험해보기 : [문장 유사도 측정기](https://ohilikeit-sts.streamlit.app/)
+
 ## 일정 (Schedule)
 프로젝트 전체 기간 (10일+) : 4월 10일 (월) 10:00 ~ 4월 20일 (목) 19:00
 
 ## 프로젝트 구조 (Project Structure)
+
 <img src="https://user-images.githubusercontent.com/37128004/233752744-9becc593-3457-4d00-bb6c-79a0423edcdc.png" width="700" height="500"/>
 
 
