@@ -20,7 +20,7 @@ def download_model_file(url):
 def load_model() -> MySTSModel:
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     if not os.path.exists("model.pt"):
-        download_model_file('https://drive.google.com/file/d/1ol_Pd3LDmTcG04h7VGHYkTD4TpgUlVk1/view?usp=share_link')
+        download_model_file('https://drive.google.com/file/d/1ol_Pd3LDmTcG04h7VGHYkTD4TpgUlVk1/view?usp=sharing')
     
     model_path = 'model.pt'
     model = torch.load(model_path, map_location=device)
