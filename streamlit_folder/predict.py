@@ -1,10 +1,10 @@
 import torch
 import streamlit as st
-from model import MySTSModel
+from streamlit_folder.model import MySTSModel
 import yaml
 from transformers import AutoTokenizer
 import sys
-with open("config.yaml") as f:
+with open("streamlit_folder/config.yaml") as f:
     config = yaml.load(f, Loader=yaml.FullLoader)
 sys.path.insert(0, config['model_path'])
 sys.path.insert(0, config['home_path'])

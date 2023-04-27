@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-from predict import load_model, get_prediction
+from streamlit_folder.predict import load_model, get_prediction
 
 def main():
     st.title('Semantic Textual Similarity')
