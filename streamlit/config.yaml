@@ -1,0 +1,3 @@
+model_path: /opt/ml/level1_semantictextsimilarity-nlp-01/saved/models/snunlp/KR-ELECTRA-discriminator_16_20_1e-05_SmoothL1Loss.pt
+home_path: /opt/ml/level1_semantictextsimilarity-nlp-01
+model_name: snunlp/KR-ELECTRA-discriminator
