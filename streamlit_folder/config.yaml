@@ -1,3 +1,2 @@
-model_path: /mnt/f/BoostCamp/projects/sts_project/level1_semantictextsimilarity-nlp-01/saved/models/snunlp/KR-ELECTRA-discriminator_16_20_1e-05_SmoothL1Loss.pt
-home_path: /mnt/f/BoostCamp/projects/sts_project/level1_semantictextsimilarity-nlp-01
+model_path: https://drive.google.com/uc?id=1ol_Pd3LDmTcG04h7VGHYkTD4TpgUlVk1
 model_name: snunlp/KR-ELECTRA-discriminator

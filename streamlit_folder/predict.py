@@ -9,10 +9,8 @@ import sys
 from models import *
 with open("streamlit_folder/config.yaml") as f:
     config = yaml.load(f, Loader=yaml.FullLoader)
-sys.path.insert(0, config['model_path'])
-sys.path.insert(0, config['home_path'])
 
-# Function to download the model file
+# 구글 드라이브를 이용한 모델 다운로드
 def download_model_file(url):
     output = "model.pt"
     gdown.download(url, output, quiet=False)
@@ -21,7 +19,7 @@ def download_model_file(url):
 def load_model() -> MySTSModel:
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     if not os.path.exists("model.pt"):
-        download_model_file('https://drive.google.com/uc?id=1ol_Pd3LDmTcG04h7VGHYkTD4TpgUlVk1')
+        download_model_file(config['model_path'])
     
     model_path = 'model.pt'
     model = torch.load(model_path, map_location=device)
