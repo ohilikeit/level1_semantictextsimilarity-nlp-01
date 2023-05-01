@@ -15,7 +15,7 @@ def download_model_file(url):
     gdown.download(url, output, quiet=False)
 
 @st.cache_resource
-def load_model() -> model.Model:
+def load_model():
     '''
     Return:
         model: 구글 드라이브에서 가져온 모델 return 
@@ -29,7 +29,7 @@ def load_model() -> model.Model:
 
     return model
 
-def get_prediction(model: model.Model, sentence1: str, sentence2: str) -> float:
+def get_prediction(model, sentence1: str, sentence2: str) -> float:
     '''
     Args:
         model: 학습된 모델
