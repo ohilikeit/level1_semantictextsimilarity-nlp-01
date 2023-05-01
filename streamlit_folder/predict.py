@@ -2,7 +2,6 @@ import os
 import gdown
 import torch
 import streamlit as st
-from streamlit_folder.model import MySTSModel
 import yaml
 from transformers import AutoTokenizer
 import sys
@@ -16,7 +15,7 @@ def download_model_file(url):
     gdown.download(url, output, quiet=False)
 
 @st.cache_resource
-def load_model() -> MySTSModel:
+def load_model():
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     if not os.path.exists("model.pt"):
         download_model_file(config['model_path'])
